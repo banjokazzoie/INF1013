@@ -7,8 +7,8 @@ import java.util.Observer;
 
 import board.Board;
 import gameUserInterface.Facade;
-import gameUserInterface.MainActionListener;
-import gameUserInterface.OpponentActionListener;
+import gameUserInterface.NicknameActionListener;
+import gameUserInterface.OpponentListActionListener;
 
 public class UserInterfaceManager extends Observable implements Observer {
 	static Client c;

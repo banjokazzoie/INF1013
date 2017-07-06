@@ -6,12 +6,12 @@ import java.util.*;
 import javax.swing.SwingUtilities;
 
 import gameUserInterface.Facade;
-import gameUserInterface.OpponentActionListener;
+import gameUserInterface.OpponentListActionListener;
 
 import java.io.*;
 
 public class Client extends Observable {
-	OpponentActionListener opponentActionListener;
+	OpponentListActionListener opponentActionListener;
 	
 	public Client(String nickname) throws IOException {
 		Socket clientSocket = new Socket("127.0.0.1", 12345);

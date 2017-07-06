@@ -23,14 +23,14 @@ import board.Board;
 import client.*;
  
 
-public class OpponentActionListener extends JFrame implements Observer {
+public class OpponentListActionListener extends JFrame implements Observer {
 	
 	ArrayList<String> nicknameList = new ArrayList<>();
 	JList <String> nicknameJlist;
 	DefaultListModel<String> listModel;
 	Board board;
 	
-    public OpponentActionListener() {    	
+    public OpponentListActionListener() {    	
         listModel = new DefaultListModel<>();              
         nicknameJlist = new JList<>(listModel);
         nicknameJlist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -55,7 +55,7 @@ public class OpponentActionListener extends JFrame implements Observer {
 		if(((String) arg1).compareTo("l")==0){
 			listModel.clear();
 		for(int i=0; i<nicknameList.size();i++){
-			if(nicknameList.get(i).compareTo(Facade.getMainActionListener().nick)!=0)
+			if(nicknameList.get(i).compareTo(Facade.getMainActionListener().nicknameString)!=0)
 			listModel.addElement(nicknameList.get(i));
 		}
 		}

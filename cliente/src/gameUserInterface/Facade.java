@@ -8,8 +8,8 @@ import client.UserInterfaceManager;
 import client.OutputThread;
 
 public class Facade extends Observable implements Observer{
-	static OpponentActionListener opponentActionListener = null;
-	static MainActionListener mainActionListener = null;
+	static OpponentListActionListener opponentActionListener = null;
+	static NicknameActionListener mainActionListener = null;
 	static Board board;
 	static Facade facade;
 	
@@ -17,14 +17,14 @@ public class Facade extends Observable implements Observer{
 	}
 	
 	public static void newMainActionListener(){
-		mainActionListener = new MainActionListener();
+		mainActionListener = new NicknameActionListener();
 	}
-	public static MainActionListener getMainActionListener (){
+	public static NicknameActionListener getMainActionListener (){
 		return mainActionListener;
 	}
-	public static OpponentActionListener getOpponentActionListener(){
+	public static OpponentListActionListener getOpponentActionListener(){
 		if(opponentActionListener==null){
-			opponentActionListener = new OpponentActionListener();
+			opponentActionListener = new OpponentListActionListener();
 		}
 		return opponentActionListener;
 	}
